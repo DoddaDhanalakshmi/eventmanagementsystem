@@ -1,0 +1,54 @@
+.servicecard-container {
+  max-width: 380px;
+  margin: 50px auto;
+  padding: 30px 25px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+.servicecard-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+.servicecard-buttons button {
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+  margin-bottom: 18px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
+  font-size: 1rem;
+}
+
+/* Delete button style */
+.btn-delete {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  color: #fff;
+}
+
+.btn-delete:hover {
+  background: linear-gradient(90deg, #ff6b81, #ff6b2b);
+  box-shadow: 0 12px 30px rgba(255, 75, 43, 0.6);
+}
+
+/* Update button style */
+.btn-update {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: #fff;
+}
+
+.btn-update:hover {
+  background: linear-gradient(90deg, #5efcff, #0095ff);
+  box-shadow: 0 12px 30px rgba(0, 114, 255, 0.6);
+}

@@ -1,0 +1,78 @@
+/* Page container */
+.packages-container {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-align: center;
+}
+
+/* Heading */
+.packages-container h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.packages-container h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #a0d8f7;
+}
+
+/* Buttons styling */
+.packages-container button {
+  width: 100%;
+  padding: 14px 0;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* Package buttons with different gradients */
+.packages-container button:nth-child(3) {
+  background: linear-gradient(90deg, #1de9b6, #1dc4e9);
+}
+
+.packages-container button:nth-child(5) {
+  background: linear-gradient(90deg, #ff6e7f, #bfe9ff);
+}
+
+.packages-container button:nth-child(7) {
+  background: linear-gradient(90deg, #7f00ff, #e100ff);
+}
+
+/* Back button style */
+.packages-container button:last-child {
+  background: #444;
+  box-shadow: none;
+}
+
+.packages-container button:hover:not(:last-child) {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.packages-container button:last-child:hover {
+  background: #666;
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+  .packages-container {
+    margin: 20px 15px;
+    padding: 25px 15px;
+  }
+}

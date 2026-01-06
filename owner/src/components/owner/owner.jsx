@@ -1,6 +1,6 @@
 import { Navbar, Container, Nav, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-
+// import "./Owner.css";
 function Owner() {
   const navigate = useNavigate();
 

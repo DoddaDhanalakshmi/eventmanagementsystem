@@ -3,19 +3,19 @@ import React from 'react'
 import { toast } from 'react-toastify'
 import {  useNavigate } from 'react-router-dom'
 import { useState,useEffect } from 'react'
+import "./servicecard.css"
 const Servicecard = () => {
     const [services,setservices]=useState([])
     const owner_id=localStorage.getItem("owner_id")
     const package_type=localStorage.getItem("selected_package")
     const event_type=localStorage.getItem("selected_event")
     const navigate=useNavigate()
-
     useEffect(()=>{
         async function displaypackageservices(){
             try{
                 const response=await axios.get(`http://127.0.0.1:8000/api/services/?owner_id=${owner_id}&package_type=${package_type}`)
                 setservices(response.data.services)
-                // toast.success("package and their services deleted succefully")
+               
             }
             catch(error){
                 console.log(error.response)
@@ -28,7 +28,7 @@ const Servicecard = () => {
     },[owner_id,package_type])
     const handledelete=async()=>{
         try{
-            const response=await axios.delete(`http://127.0.0.1:8000/api/packages/${owner_id}/${package_type}/${event_type}//delete`)
+            const response=await axios.delete(`http://127.0.0.1:8000/api/packages/${owner_id}/${package_type}/${event_type}/delete`)
             setservices([])
             console.log("package is deleted successfully...")
             
@@ -45,19 +45,9 @@ const Servicecard = () => {
         {services.map((each)=>{
             return(
             <div key={each.id}>
-                {console.log(each)}
-                <h3>price:{each.price}</h3>
-                 <p>seating:{each.seating_capacity}</p>
-                 <p>backup_generator:
-                    {each.backup_generator}
-                 </p>
-                 <p>catering:{each.catering}</p>
-                 <p>dj:{each.dj}</p>
-                 <p>food_type:{each.food_type}</p>
-                 <p>decoration:{each.decoration}</p>
-                 <p>photography:{each.photography}</p>
-                <button onClick={handledelete}>delete</button>
-                <button onClick={() => navigate("/packageform", { state: each })}>update</button>
+                    <h1>totalprice of a package:{each.total_price}</h1>
+                <button  type="button"onClick={handledelete}>delete</button>
+                <button type="button" onClick={() => navigate("/packageforms", { state: each })}>update</button>
             </div>
             )
         })}

@@ -1,0 +1,64 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Page background */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Keep navbar at top */
+.navbar {
+  position: relative;
+  z-index: 10;
+}
+
+/* Center login form below navbar */
+body > div {
+  min-height: calc(100vh - 70px); /* adjust if navbar height changes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login card */
+body > div > div {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 20px;
+  width: 380px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+/* Heading */
+h2 {
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(90deg, #00e5ff, #20c997);
+  font-weight: 600;
+  cursor: pointer;
+}
